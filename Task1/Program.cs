@@ -25,6 +25,8 @@ void PrintArray (int[] array)
     return;
 }
 
+try
+{
 Console.WriteLine("Введите кол-во чисел, планируемых к вводу: ");
 int m = Convert.ToInt32(Console.ReadLine());
 
@@ -37,3 +39,8 @@ for(int i = 0; i < m; i++)
 
 int count = Count(array);
 Console.WriteLine($"Количество положительных чисел = {count}");
+}
+catch
+{
+    Console.WriteLine("Ошибка ввода числа! Введите целое число!");
+}
